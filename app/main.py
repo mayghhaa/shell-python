@@ -1,5 +1,7 @@
 import sys
 
+COMMAND_LIST=["echo", "type","exit"]
+
 
 def main():
     # Uncomment this block to pass the first stage
@@ -17,8 +19,11 @@ def main():
             sys.exit(0)
         elif command[:5] == "echo ":
             print(f"{command[5:]}")
+        elif command[:4] =="type":
+            if command[5:] in COMMAND_LIST:
+                print(f"{command[5:]} is a shell builtin")
         else:
-            print(f"{command}: command not found")
+            print(f"{command}: not found")
 
 
 
