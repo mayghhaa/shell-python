@@ -15,13 +15,10 @@ def main():
         # exit command 
         if command[:4] == "exit":
             sys.exit(0)
-
-        # echo command 
-
-        if command[:5] == "echo ":
+        elif command[:5] == "echo ":
             print(f"{command[5:]}")
-        
-        print(f"{command}: command not found")
+        else 
+            print(f"{command}: command not found")
 
 
 
