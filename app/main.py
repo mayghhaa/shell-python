@@ -17,7 +17,7 @@ def main():
             sys.exit(0)
         elif command[:5] == "echo ":
             print(f"{command[5:]}")
-        else 
+        else:
             print(f"{command}: command not found")
 
 
