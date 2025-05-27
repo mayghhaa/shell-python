@@ -18,8 +18,8 @@ def main():
 
         # echo command 
 
-        if command[:4] == "echo":
-            print(f"{command[4:]}")
+        if command[:5] == "echo ":
+            print(f"{command[6:]}")
         
         print(f"{command}: command not found")
 
