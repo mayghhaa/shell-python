@@ -16,6 +16,10 @@ def main():
         if command[:4] == "exit":
             sys.exit(0)
 
+        # echo command 
+
+        if command[:4] == "echo":
+            print(f"{command[4:]}")
         
         print(f"{command}: command not found")
 
