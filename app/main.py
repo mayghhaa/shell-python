@@ -10,14 +10,16 @@ def main():
     while True:
         sys.stdout.write("$ ")
         command = input()
+
+
+        # exit command 
+        if command[:4] == "exit":
+            sys.exit(0)
+
+        
         print(f"{command}: command not found")
 
 
-        if command.strip() == "exit(0)":
-            sys.exit(0)  # or just use exit(0)
-
-        if command[:4] == "exit":
-            sys.exit(0)
 
 if __name__ == "__main__":
     main()
